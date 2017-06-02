@@ -21,7 +21,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^$', RedirectView.as_view(url='mainsite/', permanent=True)),
     url(r'^admin/', admin.site.urls),
-    url(r'^mainapp/', include('MainApp.urls')),
+    url(r'^mainapp/', include('MainApp.urls',namespace='mainapp')),
 
 ]
 admin.site.site_header = ("Admin Site")
